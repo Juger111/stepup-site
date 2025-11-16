@@ -1075,816 +1075,1019 @@
   </div>
 
   <script>
-    // --------- локализация ---------
-    const translations = {
-      ru: {
-        logo_sub: "Карьерный Telegram-бот",
-        nav_how: "Как это работает",
-        nav_tracks: "Направления",
-        nav_courses: "Курсы",
-        nav_support: "Поддержка",
-        nav_faq: "FAQ",
-        beta_badge: "БЕТА-ВЕРСИЯ",
-        account_btn: "Аккаунт",
-        open_bot: "Открыть бота",
+  // --------- локализация ---------
+  const translations = {
+    ru: {
+      logo_sub: "Карьерный Telegram-бот",
+      nav_how: "Как это работает",
+      nav_tracks: "Направления",
+      nav_courses: "Курсы",
+      nav_support: "Поддержка",
+      nav_faq: "FAQ",
+      beta_badge: "БЕТА-ВЕРСИЯ",
+      account_btn: "Аккаунт",
+      open_bot: "Открыть бота",
 
-        hero_pill:
-          "Telegram-бот, который помогает выбрать карьерный трек за 5–7 минут",
-        hero_title_1: "Stepup — карьерный бот,",
-        hero_title_2: "который переводит интересы",
-        hero_title_3: "в реальные роли.",
-        hero_sub:
-          "Пройди короткий тест, узнай, к каким направлениям ты ближе (технологии, продукт, дизайн, коммуникации, ESG) и получи подборку профессий и бесплатных курсов.",
-        hero_cta_main: "Запустить в Telegram",
-        hero_cta_secondary: "Посмотреть, как работает",
-        hero_for:
-          "Для кого: школьники, студенты, джуны, люди на этапе смены сферы. Бот работает на русском, английском и азербайджанском.",
-        demo_badge: "Demo-скрин Stepup",
-        demo_footnote:
-          "Фокус: Python / Data / UX / ESG • ~5 минут на прохождение теста",
+      hero_pill:
+        "Telegram-бот, который помогает выбрать карьерный трек за 5–7 минут",
+      hero_title_1: "Stepup — карьерный бот,",
+      hero_title_2: "который переводит интересы",
+      hero_title_3: "в реальные роли.",
+      hero_sub:
+        "Пройди короткий тест, узнай, к каким направлениям ты ближе (технологии, продукт, дизайн, коммуникации, ESG) и получи подборку профессий и бесплатных курсов.",
+      hero_cta_main: "Запустить в Telegram",
+      hero_cta_secondary: "Посмотреть, как работает",
+      hero_for:
+        "Для кого: школьники, студенты, джуны, люди на этапе смены сферы. Бот работает на русском, английском и азербайджанском.",
+      demo_badge: "Demo-скрин Stepup",
+      demo_footnote:
+        "Фокус: Python / Data / UX / ESG • ~5 минут на прохождение теста",
 
-        how_title: "Как это работает",
-        how_text:
-          "Stepup задаёт серию коротких вопросов, определяет, к каким типам задач ты тянешься, и подбирает направления и курсы. При желании можно сохранить профиль и вернуться к нему позже.",
-        how_step_1_title: "1. Пройди тест в боте",
-        how_step_1_text:
-          "10 вопросов про задачи, которые тебя заряжают, тип команды и ощущения от успеха.",
-        how_step_2_title: "2. Получи направления и роли",
-        how_step_2_text:
-          "Tech, Product, Design, Communications, ESG — бот даёт расклад по каждому направлению.",
-        how_step_3_title: "3. Сохрани результат и двигайся",
-        how_step_3_text:
-          "Сохраняй профиль, отмечай интересующие профессии и курсы, возвращайся к ним в удобное время.",
+      how_title: "Как это работает",
+      how_text:
+        "Stepup задаёт серию коротких вопросов, определяет, к каким типам задач ты тянешься, и подбирает направления и курсы. При желании можно сохранить профиль и вернуться к нему позже.",
+      how_step_1_title: "1. Пройди тест в боте",
+      how_step_1_text:
+        "10 вопросов про задачи, которые тебя заряжают, тип команды и ощущения от успеха.",
+      how_step_2_title: "2. Получи направления и роли",
+      how_step_2_text:
+        "Tech, Product, Design, Communications, ESG — бот даёт расклад по каждому направлению.",
+      how_step_3_title: "3. Сохрани результат и двигайся",
+      how_step_3_text:
+        "Сохраняй профиль, отмечай интересующие профессии и курсы, возвращайся к ним в удобное время.",
 
-        tracks_title: "Направления",
-        tracks_text:
-          "Мы фокусируемся на пяти треках: технологии, продукт, творчество, коммуникации и зелёные/ESG-проекты.",
-        tracks_tech_hint: "Python, SQL, Git, Data",
-        tracks_creative_hint: "Figma, Prototyping, Story",
-        tracks_business_hint: "Hypotheses, A/B, Metrics",
-        tracks_social_hint: "Empathy, CRM, NPS",
-        tracks_green_hint: "Climate, Reporting, Impact",
+      tracks_title: "Направления",
+      tracks_text:
+        "Мы фокусируемся на пяти треках: технологии, продукт, творчество, коммуникации и зелёные/ESG-проекты.",
+      tracks_tech_hint: "Python, SQL, Git, Data",
+      tracks_creative_hint: "Figma, Prototyping, Story",
+      tracks_business_hint: "Hypotheses, A/B, Metrics",
+      tracks_social_hint: "Empathy, CRM, NPS",
+      tracks_green_hint: "Climate, Reporting, Impact",
 
-        courses_title: "Бесплатные курсы",
-        courses_text:
-          "В боте ты получаешь подборку бесплатных материалов под свой трек. Здесь — несколько примеров.",
+      courses_title: "Бесплатные курсы",
+      courses_text:
+        "В боте ты получаешь подборку бесплатных материалов под свой трек. Здесь — несколько примеров.",
 
-        support_title: "Поддержка и форум",
-        support_text:
-          "Если что-то не работает или хочешь обсудить карьерные вопросы — напиши в форум ниже. Сообщения видят только пользователи сайта.",
+      support_title: "Поддержка и форум",
+      support_text:
+        "Если что-то не работает или хочешь обсудить карьерные вопросы — напиши в форум ниже. Сообщения видят только пользователи сайта.",
 
-        faq_title: "FAQ",
-        faq_text:
-          "Бот не даёт «приговор» и не подменяет профориентацию. Он помогает сузить поле, подсветить 1–2 подходящих трека и дать стартовые материалы.",
+      faq_title: "FAQ",
+      faq_text:
+        "Бот не даёт «приговор» и не подменяет профориентацию. Он помогает сузить поле, подсветить 1–2 подходящих трека и дать стартовые материалы.",
+    },
+    en: {
+      logo_sub: "Career Telegram bot",
+      nav_how: "How it works",
+      nav_tracks: "Tracks",
+      nav_courses: "Courses",
+      nav_support: "Support",
+      nav_faq: "FAQ",
+      beta_badge: "BETA",
+      account_btn: "Account",
+      open_bot: "Open bot",
+
+      hero_pill:
+        "Telegram bot that helps you pick a career track in 5–7 minutes",
+      hero_title_1: "Stepup is a career bot",
+      hero_title_2: "that turns your interests",
+      hero_title_3: "into real roles.",
+      hero_sub:
+        "Take a short test, see which tracks fit you best (tech, product, design, communications, ESG) and get a curated list of professions and free courses.",
+      hero_cta_main: "Launch in Telegram",
+      hero_cta_secondary: "See how it works",
+      hero_for:
+        "For school & university students, juniors and career switchers. The bot supports Russian, English and Azerbaijani.",
+      demo_badge: "Stepup demo screen",
+      demo_footnote:
+        "Focus: Python / Data / UX / ESG • ~5 minutes to complete",
+
+      how_title: "How it works",
+      how_text:
+        "Stepup asks a set of short questions, figures out which types of tasks energize you and matches you with tracks & courses. You can save your profile and return later.",
+      how_step_1_title: "1. Take the bot test",
+      how_step_1_text:
+        "10 questions about tasks you enjoy, team format and what success looks like for you.",
+      how_step_2_title: "2. Get tracks & roles",
+      how_step_2_text:
+        "Tech, Product, Design, Communications, ESG — we show how close each track is.",
+      how_step_3_title: "3. Save and act",
+      how_step_3_text:
+        "Save your profile, mark professions and courses, and come back any time.",
+
+      tracks_title: "Tracks",
+      tracks_text:
+        "We focus on five tracks: technology, product, creativity, communications and green/ESG projects.",
+      tracks_tech_hint: "Python, SQL, Git, Data",
+      tracks_creative_hint: "Figma, Prototyping, Story",
+      tracks_business_hint: "Hypotheses, A/B, Metrics",
+      tracks_social_hint: "Empathy, CRM, NPS",
+      tracks_green_hint: "Climate, Reporting, Impact",
+
+      courses_title: "Free courses",
+      courses_text:
+        "In the bot you get a tailored selection of free resources for your track. Here are a few examples.",
+
+      support_title: "Support & forum",
+      support_text:
+        "If something breaks or you want to discuss career questions — write in the forum below. Only site users can post.",
+
+      faq_title: "FAQ",
+      faq_text:
+        "The bot doesn’t replace proper career counseling. It narrows the field, highlights 1–2 tracks and gives starter resources.",
+    },
+    az: {
+      logo_sub: "Karyera Telegram botu",
+      nav_how: "Necə işləyir",
+      nav_tracks: "İstiqamətlər",
+      nav_courses: "Kurslar",
+      nav_support: "Dəstək",
+      nav_faq: "FAQ",
+      beta_badge: "BETA",
+      account_btn: "Hesab",
+      open_bot: "Botu aç",
+
+      hero_pill:
+        "5–7 dəqiqəyə karyera istiqamətini seçməyə kömək edən Telegram botu",
+      hero_title_1: "Stepup — karyera botudur,",
+      hero_title_2: "maraq və güclü tərəflərini",
+      hero_title_3: "real rollara çevirir.",
+      hero_sub:
+        "Qısa testdən keç, sənə uyğun olan istiqamətləri (texnologiya, product, dizayn, kommunikasiya, ESG) gör və pulsuz kurs seçimini al.",
+      hero_cta_main: "Telegram-da işə sal",
+      hero_cta_secondary: "Necə işlədiyini gör",
+      hero_for:
+        "Kimlər üçün: şagirdlər, tələbələr, juniorlar və sahəni dəyişənlər. Bot rus, ingilis və azərbaycan dillərində işləyir.",
+      demo_badge: "Stepup demo ekranı",
+      demo_footnote:
+        "Fokus: Python / Data / UX / ESG • testi keçmək üçün ~5 dəqiqə",
+
+      how_title: "Necə işləyir",
+      how_text:
+        "Stepup qısa suallar verir, səni ruhlandıran tapşırıqları müəyyən edir və istiqamət + kurslar təklif edir. Profili yadda saxlayıb sonra qayıda bilərsən.",
+      how_step_1_title: "1. Botda testdən keç",
+      how_step_1_text:
+        "Səni motivasiya edən tapşırıqlar, komanda formatı və uğur barədə 10 sual.",
+      how_step_2_title: "2. İstiqamət və rolları al",
+      how_step_2_text:
+        "Tech, Product, Design, Communications, ESG — hər istiqamətə nə qədər yaxın olduğunu göstəririk.",
+      how_step_3_title: "3. Nəticəni saxla və hərəkətə keç",
+      how_step_3_text:
+        "Profilini saxla, maraqlı peşə və kursları qeyd et və istənilən vaxt geri dön.",
+
+      tracks_title: "İstiqamətlər",
+      tracks_text:
+        "Beş əsas istiqamət: texnologiyalar, product, yaradıcılıq, kommunikasiya və yaşıl/ESG layihələr.",
+      tracks_tech_hint: "Python, SQL, Git, Data",
+      tracks_creative_hint: "Figma, Prototyping, Story",
+      tracks_business_hint: "Hypotheses, A/B, Metrics",
+      tracks_social_hint: "Empathy, CRM, NPS",
+      tracks_green_hint: "Climate, Reporting, Impact",
+
+      courses_title: "Pulsuz kurslar",
+      courses_text:
+        "Botda sənin istiqamətinə uyğun pulsuz materiallar seçimi alırsan. Burada yalnız bir neçə nümunə var.",
+
+      support_title: "Dəstək və forum",
+      support_text:
+        "Nə isə işləmirsə və ya karyera ilə bağlı sualın varsa, aşağıdakı forumda yaz. Yazıları yalnız sayt istifadəçiləri görə bilir.",
+
+      faq_title: "FAQ",
+      faq_text:
+        "Bot klassik peşəyönümlülüyü əvəz etmir. O, sahəni daraldır, 1–2 yaxın istiqaməti göstərir və start resursları verir.",
+    },
+  };
+
+  let currentLang =
+    localStorage.getItem("stepup_lang") ||
+    (navigator.language || "ru").slice(0, 2);
+  if (!["ru", "en", "az"].includes(currentLang)) currentLang = "ru";
+
+  function applyTranslations() {
+    const dict = translations[currentLang] || translations.ru;
+    document.documentElement.lang = currentLang;
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key]) el.textContent = dict[key];
+    });
+
+    document
+      .querySelectorAll(".lang-pill")
+      .forEach((el) =>
+        el.classList.toggle("active", el.dataset.lang === currentLang),
+      );
+  }
+
+  document.addEventListener("click", (e) => {
+    const pill = e.target.closest(".lang-pill");
+    if (pill) {
+      const lang = pill.dataset.lang;
+      if (["ru", "en", "az"].includes(lang)) {
+        currentLang = lang;
+        localStorage.setItem("stepup_lang", lang);
+        applyTranslations();
+      }
+    }
+  });
+
+  // --------- аккаунт (front-only, localStorage) ---------
+  const USER_KEY = "stepup_user";
+
+  function getCurrentUser() {
+    try {
+      const raw = localStorage.getItem(USER_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveUser(user) {
+    localStorage.setItem(USER_KEY, JSON.stringify(user));
+  }
+
+  function updateAccountUI() {
+    const btn = document.getElementById("account-btn");
+    const summary = document.getElementById("profile-summary");
+    const user = getCurrentUser();
+    if (!btn || !summary) return;
+
+    const span = btn.querySelector("span");
+    if (user) {
+      span.textContent = user.name || user.email || "Аккаунт";
+      let desc = "";
+      if (user.track) {
+        desc += "Трек: " + user.track.toUpperCase();
+      }
+      if (user.profession) {
+        if (desc) desc += " • ";
+        desc += "Роль: " + user.profession;
+      }
+      summary.textContent = desc || "";
+    } else {
+      span.textContent =
+        (translations[currentLang] && translations[currentLang].account_btn) ||
+        translations.ru.account_btn;
+      summary.textContent = "";
+    }
+  }
+
+  function showAccountModal() {
+  const overlay = document.getElementById("account-overlay");
+  const user = getCurrentUser();
+  const nameInput = document.getElementById("acc-name");
+  const emailInput = document.getElementById("acc-email");
+  const passInput = document.getElementById("acc-password");
+  const trackSelect = document.getElementById("acc-track");
+  const errorEl = document.getElementById("account-error");
+  const titleEl = document.getElementById("account-title");
+  const subEl = document.getElementById("account-sub");
+  const toggleEl = document.getElementById("account-toggle");
+
+  errorEl.textContent = "";
+
+  if (user) {
+    // режим "редактирование профиля"
+    titleEl.textContent = "Твой профиль Stepup";
+    subEl.textContent =
+      "Измени имя, направление или выйди из аккаунта на этом устройстве.";
+    nameInput.value = user.name || "";
+    emailInput.value = user.email || "";
+    passInput.value = user.password || "";
+    trackSelect.value = user.track || "";
+
+    if (toggleEl) {
+      toggleEl.textContent = "Выйти из аккаунта";
+      toggleEl.style.display = "inline";
+    }
+  } else {
+    // режим "создать / войти"
+    titleEl.textContent = "Создать аккаунт Stepup";
+    subEl.textContent =
+      "Сохрани результаты теста и доступ к форуму на этом устройстве. " +
+      "Если аккаунт уже был, введи свой email и пароль и нажми «Сохранить».";
+    nameInput.value = "";
+    emailInput.value = "";
+    passInput.value = "";
+    trackSelect.value = "";
+
+    if (toggleEl) {
+      toggleEl.textContent = "У меня уже есть аккаунт";
+      toggleEl.style.display = "inline";
+    }
+  }
+
+  overlay.classList.add("visible");
+}
+
+
+  function hideAccountModal() {
+    const overlay = document.getElementById("account-overlay");
+    overlay.classList.remove("visible");
+  }
+
+  // --------- демо-тест на сайте ---------
+  const quizQuestions = [
+    {
+      id: 1,
+      text: {
+        ru: "Что тебе интереснее всего делать в проекте?",
+        en: "What is most interesting for you in a project?",
+        az: "Layihədə sənin üçün ən maraqlı nədir?",
       },
-      en: {
-        logo_sub: "Career Telegram bot",
-        nav_how: "How it works",
-        nav_tracks: "Tracks",
-        nav_courses: "Courses",
-        nav_support: "Support",
-        nav_faq: "FAQ",
-        beta_badge: "BETA",
-        account_btn: "Account",
-        open_bot: "Open bot",
-
-        hero_pill:
-          "Telegram bot that helps you pick a career track in 5–7 minutes",
-        hero_title_1: "Stepup is a career bot",
-        hero_title_2: "that turns your interests",
-        hero_title_3: "into real roles.",
-        hero_sub:
-          "Take a short test, see which tracks fit you best (tech, product, design, communications, ESG) and get a curated list of professions and free courses.",
-        hero_cta_main: "Launch in Telegram",
-        hero_cta_secondary: "See how it works",
-        hero_for:
-          "For school & university students, juniors and career switchers. The bot supports Russian, English and Azerbaijani.",
-        demo_badge: "Stepup demo screen",
-        demo_footnote:
-          "Focus: Python / Data / UX / ESG • ~5 minutes to complete",
-
-        how_title: "How it works",
-        how_text:
-          "Stepup asks a set of short questions, figures out which types of tasks energize you and matches you with tracks & courses. You can save your profile and return later.",
-        how_step_1_title: "1. Take the bot test",
-        how_step_1_text:
-          "10 questions about tasks you enjoy, team format and what success looks like for you.",
-        how_step_2_title: "2. Get tracks & roles",
-        how_step_2_text:
-          "Tech, Product, Design, Communications, ESG — we show how close each track is.",
-        how_step_3_title: "3. Save and act",
-        how_step_3_text:
-          "Save your profile, mark professions and courses, and come back any time.",
-
-        tracks_title: "Tracks",
-        tracks_text:
-          "We focus on five tracks: technology, product, creativity, communications and green/ESG projects.",
-        tracks_tech_hint: "Python, SQL, Git, Data",
-        tracks_creative_hint: "Figma, Prototyping, Story",
-        tracks_business_hint: "Hypotheses, A/B, Metrics",
-        tracks_social_hint: "Empathy, CRM, NPS",
-        tracks_green_hint: "Climate, Reporting, Impact",
-
-        courses_title: "Free courses",
-        courses_text:
-          "In the bot you get a tailored selection of free resources for your track. Here are a few examples.",
-
-        support_title: "Support & forum",
-        support_text:
-          "If something breaks or you want to discuss career questions — write in the forum below. Only site users can post.",
-
-        faq_title: "FAQ",
-        faq_text:
-          "The bot doesn’t replace proper career counseling. It narrows the field, highlights 1–2 tracks and gives starter resources.",
+      options: [
+        {
+          label: {
+            ru: "Создавать визуально убедительное",
+            en: "Create visuals",
+            az: "Vizual konseptlər yaratmaq",
+          },
+          weights: { creative: 2 },
+        },
+        {
+          label: {
+            ru: "Решать логические/тех. задачи",
+            en: "Solve tech / logical tasks",
+            az: "Texniki/məntiqi tapşırıqlar",
+          },
+          weights: { tech: 2 },
+        },
+        {
+          label: {
+            ru: "Помогать людям и общаться",
+            en: "Help people and communicate",
+            az: "İnsanlara kömək və ünsiyyət",
+          },
+          weights: { social: 2 },
+        },
+        {
+          label: {
+            ru: "Организовывать и влиять",
+            en: "Organise and influence",
+            az: "Təşkil etmək və təsir göstərmək",
+          },
+          weights: { business: 2 },
+        },
+      ],
+    },
+    {
+      id: 2,
+      text: {
+        ru: "Какой тип задач тебя заряжает?",
+        en: "What type of tasks energize you?",
+        az: "Səni hansı tapşırıqlar ruhlandırır?",
       },
-      az: {
-        logo_sub: "Karyera Telegram botu",
-        nav_how: "Necə işləyir",
-        nav_tracks: "İstiqamətlər",
-        nav_courses: "Kurslar",
-        nav_support: "Dəstək",
-        nav_faq: "FAQ",
-        beta_badge: "BETA",
-        account_btn: "Hesab",
-        open_bot: "Botu aç",
+      options: [
+        {
+          label: {
+            ru: "Дизайн-процесс и сторителлинг",
+            en: "Design process & storytelling",
+            az: "Dizayn və hekayəçilik",
+          },
+          weights: { creative: 2 },
+        },
+        {
+          label: {
+            ru: "Код/данные/автоматизация",
+            en: "Code / data / automation",
+            az: "Kod / data / avtomatlaşdırma",
+          },
+          weights: { tech: 2 },
+        },
+        {
+          label: {
+            ru: "Коммуникации/поддержка",
+            en: "Communications / support",
+            az: "Kommunikasiya / dəstək",
+          },
+          weights: { social: 2 },
+        },
+        {
+          label: {
+            ru: "Метрики/рост/управление",
+            en: "Metrics / growth / management",
+            az: "Metriklər / artım / idarəetmə",
+          },
+          weights: { business: 2 },
+        },
+      ],
+    },
+    {
+      id: 3,
+      text: {
+        ru: "Что проще начать уже сегодня?",
+        en: "What is easier to start today?",
+        az: "Bu gün nədən başlamaq asandır?",
+      },
+      options: [
+        {
+          label: {
+            ru: "Сделать обложку/ролик",
+            en: "Make a cover / video",
+            az: "Obloşka və ya video",
+          },
+          weights: { creative: 2 },
+        },
+        {
+          label: {
+            ru: "Написать бота/скрипт",
+            en: "Write a bot / script",
+            az: "Bot və ya skript yazmaq",
+          },
+          weights: { tech: 2 },
+        },
+        {
+          label: {
+            ru: "Помочь с разбором кейса",
+            en: "Help with a case",
+            az: "Keysi birlikdə təhlil etmək",
+          },
+          weights: { social: 2 },
+        },
+        {
+          label: {
+            ru: "Составить план и дедлайны",
+            en: "Draft a plan & deadlines",
+            az: "Plan və deadline tərtib etmək",
+          },
+          weights: { business: 2 },
+        },
+      ],
+    },
+    {
+      id: 4,
+      text: {
+        ru: "Какой формат команды комфортнее?",
+        en: "What team format is more comfortable?",
+        az: "Hansı komanda formatı rahatdır?",
+      },
+      options: [
+        {
+          label: {
+            ru: "Малая креативная команда",
+            en: "Small creative team",
+            az: "Kiçik kreativ komanda",
+          },
+          weights: { creative: 2 },
+        },
+        {
+          label: {
+            ru: "Инженерная команда",
+            en: "Engineering team",
+            az: "Mühəndislik komandası",
+          },
+          weights: { tech: 2 },
+        },
+        {
+          label: {
+            ru: "Поддержка/сообщество",
+            en: "Support / community",
+            az: "Dəstək / icma",
+          },
+          weights: { social: 2 },
+        },
+        {
+          label: {
+            ru: "Кросс-функциональная",
+            en: "Cross-functional",
+            az: "Çoxfunksiyalı komanda",
+          },
+          weights: { business: 2 },
+        },
+      ],
+    },
+    {
+      id: 5,
+      text: {
+        ru: "Что для тебя успех через 6 месяцев?",
+        en: "What is success for you in 6 months?",
+        az: "6 ay sonra uğur sənin üçün nədir?",
+      },
+      options: [
+        {
+          label: {
+            ru: "Портфолио из 3 работ",
+            en: "Portfolio of 3 works",
+            az: "3 işdən ibarət portfel",
+          },
+          weights: { creative: 2 },
+        },
+        {
+          label: {
+            ru: "Работающий автоскрипт/бот",
+            en: "Working script / bot",
+            az: "İşləyən bot və ya skript",
+          },
+          weights: { tech: 2 },
+        },
+        {
+          label: {
+            ru: "Крутые отзывы людей",
+            en: "Great feedback from people",
+            az: "İnsanlardan yüksək rəy",
+          },
+          weights: { social: 2 },
+        },
+        {
+          label: {
+            ru: "Рост метрик продукта",
+            en: "Product metrics growth",
+            az: "Layihə metriklərinin artması",
+          },
+          weights: { business: 2 },
+        },
+      ],
+    },
+  ];
 
-        hero_pill:
-          "5–7 dəqiqəyə karyera istiqamətini seçməyə kömək edən Telegram botu",
-        hero_title_1: "Stepup — karyera botudur,",
-        hero_title_2: "maraq və güclü tərəflərini",
-        hero_title_3: "real rollara çevirir.",
-        hero_sub:
-          "Qısa testdən keç, sənə uyğun olan istiqamətləri (texnologiya, product, dizayn, kommunikasiya, ESG) gör və pulsuz kurs seçimini al.",
-        hero_cta_main: "Telegram-da işə sal",
-        hero_cta_secondary: "Necə işlədiyini gör",
-        hero_for:
-          "Kimlər üçün: şagirdlər, tələbələr, juniorlar və sahəni dəyişənlər. Bot rus, ingilis və azərbaycan dillərində işləyir.",
-        demo_badge: "Stepup demo ekranı",
-        demo_footnote:
-          "Fokus: Python / Data / UX / ESG • testi keçmək üçün ~5 dəqiqə",
+  let quizIndex = 0;
+  let quizScores = { tech: 0, creative: 0, social: 0, business: 0 };
 
-        how_title: "Necə işləyir",
-        how_text:
-          "Stepup qısa suallar verir, səni ruhlandıran tapşırıqları müəyyən edir və istiqamət + kurslar təklif edir. Profili yadda saxlayıb sonra qayıda bilərsən.",
-        how_step_1_title: "1. Botda testdən keç",
-        how_step_1_text:
-          "Səni motivasiya edən tapşırıqlar, komanda formatı və uğur barədə 10 sual.",
-        how_step_2_title: "2. İstiqamət və rolları al",
-        how_step_2_text:
-          "Tech, Product, Design, Communications, ESG — hər istiqamətə nə qədər yaxın olduğunu göstəririk.",
-        how_step_3_title: "3. Nəticəni saxla və hərəkətə keç",
-        how_step_3_text:
-          "Profilini saxla, maraqlı peşə və kursları qeyd et və istənilən vaxt geri dön.",
+  function updateQuizBar() {
+    const bar = document.getElementById("quiz-bar");
+    const progress = (quizIndex / quizQuestions.length) * 100;
+    bar.style.width = progress + "%";
+  }
 
-        tracks_title: "İstiqamətlər",
-        tracks_text:
-          "Beş əsas istiqamət: texnologiyalar, product, yaradıcılıq, kommunikasiya və yaşıl/ESG layihələr.",
-        tracks_tech_hint: "Python, SQL, Git, Data",
-        tracks_creative_hint: "Figma, Prototyping, Story",
-        tracks_business_hint: "Hypotheses, A/B, Metrics",
-        tracks_social_hint: "Empathy, CRM, NPS",
-        tracks_green_hint: "Climate, Reporting, Impact",
+  function renderQuizCard() {
+    const q = quizQuestions[quizIndex];
+    if (!q) {
+      showQuizResult();
+      return;
+    }
+    const label = document.getElementById("quiz-label");
+    const textEl = document.getElementById("quiz-question");
+    const optsEl = document.getElementById("quiz-options");
 
-        courses_title: "Pulsuz kurslar",
-        courses_text:
-          "Botda sənin istiqamətinə uyğun pulsuz materiallar seçimi alırsan. Burada yalnız bir neçə nümunə var.",
+    let wordQuestion =
+      currentLang === "ru"
+        ? "Вопрос"
+        : currentLang === "az"
+        ? "Sual"
+        : "Question";
 
-        support_title: "Dəstək və forum",
-        support_text:
-          "Nə isə işləmirsə və ya karyera ilə bağlı sualın varsa, aşağıdakı forumda yaz. Yazıları yalnız sayt istifadəçiləri görə bilir.",
+    label.textContent =
+      wordQuestion + " " + (quizIndex + 1) + " / " + quizQuestions.length;
 
-        faq_title: "FAQ",
-        faq_text:
-          "Bot klassik peşəyönümlülüyü əvəz etmir. O, sahəni daraldır, 1–2 yaxın istiqaməti göstərir və start resursları verir.",
+    const text = q.text[currentLang] || q.text.ru;
+    textEl.textContent = text;
+
+    optsEl.innerHTML = "";
+    q.options.forEach((opt) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "demo-option";
+      btn.textContent = opt.label[currentLang] || opt.label.ru;
+      btn.addEventListener("click", () => {
+        Object.keys(opt.weights).forEach((k) => {
+          quizScores[k] = (quizScores[k] || 0) + opt.weights[k];
+        });
+        quizIndex++;
+        updateQuizBar();
+        renderQuizCard();
+      });
+      optsEl.appendChild(btn);
+    });
+  }
+
+  function showQuizResult() {
+    const label = document.getElementById("quiz-label");
+    const textEl = document.getElementById("quiz-question");
+    const optsEl = document.getElementById("quiz-options");
+    const resultLabel = document.getElementById("quiz-result-label");
+
+    let wordResult =
+      currentLang === "ru" ? "Результат" : currentLang === "az" ? "Nəticə" : "Result";
+    label.textContent = wordResult;
+
+    const entries = Object.entries(quizScores);
+    entries.sort((a, b) => b[1] - a[1]);
+    const top = entries[0] ? entries[0][0] : "tech";
+
+    const names = {
+      tech: { ru: "Tech", en: "Tech", az: "Tech" },
+      creative: {
+        ru: "Creative / Design",
+        en: "Creative / Design",
+        az: "Creative / Design",
+      },
+      social: { ru: "Social / CX", en: "Social / CX", az: "Social / CX" },
+      business: {
+        ru: "Product / Business",
+        en: "Product / Business",
+        az: "Product / Business",
       },
     };
 
-    let currentLang =
-      localStorage.getItem("stepup_lang") ||
-      (navigator.language || "ru").slice(0, 2) ||
-      "ru";
-    if (!["ru", "en", "az"].includes(currentLang)) currentLang = "ru";
+    const topLabel = (names[top] && names[top][currentLang]) || names[top].ru;
 
-    function applyTranslations() {
-      const dict = translations[currentLang] || translations.ru;
-      document.documentElement.lang = currentLang;
+    let message;
+    if (currentLang === "ru") {
+      message =
+        "Тебе ближе всего трек: " +
+        topLabel +
+        ". Сохрани результат в аккаунте и пройди тест в боте, чтобы получить подборку профессий.";
+    } else if (currentLang === "az") {
+      message =
+        "Sənə ən yaxın trek: " +
+        topLabel +
+        ". Nəticəni hesabında saxla və peşə seçimi üçün botdakı tam testi keç.";
+    } else {
+      message =
+        "Your closest track: " +
+        topLabel +
+        ". Save it in your account and take the full test in the bot to get matching roles.";
+    }
 
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.getAttribute("data-i18n");
-        if (dict[key]) el.textContent = dict[key];
-      });
+    textEl.textContent = message;
+    optsEl.innerHTML = "";
 
+    let prefix;
+    if (currentLang === "ru") prefix = "Ближе всего: ";
+    else if (currentLang === "az") prefix = "Ən yaxın: ";
+    else prefix = "Closest: ";
+
+    resultLabel.innerHTML = prefix + "<b>" + topLabel + "</b>";
+
+    // обновим профиль пользователя (front-only)
+    const existing = getCurrentUser();
+    let professionName;
+    if (top === "tech") professionName = "Junior Python / Data";
+    else if (top === "creative") professionName = "Junior UX/UI Designer";
+    else if (top === "social") professionName = "Customer Success / Support";
+    else professionName = "Product / Biz-analyst";
+
+    const updated = {
+      name: existing ? existing.name : "",
+      email: existing ? existing.email : "",
+      password: existing ? existing.password : "",
+      track: top,
+      profession: professionName,
+    };
+    saveUser(updated);
+    updateAccountUI();
+  }
+
+  document.querySelectorAll(".demo-lang-pill").forEach((el) => {
+    el.addEventListener("click", () => {
       document
-        .querySelectorAll(".lang-pill")
-        .forEach((el) =>
-          el.classList.toggle("active", el.dataset.lang === currentLang),
+        .querySelectorAll(".demo-lang-pill")
+        .forEach((p) => p.classList.remove("active"));
+      el.classList.add("active");
+      const lang = el.getAttribute("data-demo-lang");
+      if (["ru", "en", "az"].includes(lang)) {
+        currentLang = lang;
+        localStorage.setItem("stepup_lang", lang);
+        applyTranslations();
+        renderQuizCard();
+      }
+    });
+  });
+
+  function scrollToDemo() {
+    document
+      .getElementById("demo-card")
+      .scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  // --------- форум ---------
+  const API_BASE = "/api";
+
+  let forumCurrentThreadId = null;
+
+  async function forumApiGet(path) {
+    const res = await fetch(API_BASE + path);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return res.json();
+  }
+
+  async function forumApiPost(path, payload) {
+    const res = await fetch(API_BASE + path, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      let txt = "";
+      try {
+        txt = await res.text();
+      } catch (e) {}
+      throw new Error("HTTP " + res.status + ": " + txt);
+    }
+    return res.json();
+  }
+
+  function forumRenderThreadsList(threads) {
+    const listEl = document.getElementById("forum-list");
+    const threadEl = document.getElementById("forum-thread");
+    const backBtn = document.getElementById("forum-back-btn");
+    const replyForm = document.getElementById("forum-reply-form");
+    const newForm = document.getElementById("forum-new-form");
+    if (!listEl) return;
+
+    forumCurrentThreadId = null;
+    threadEl.classList.add("hidden");
+    backBtn.classList.add("hidden");
+    replyForm.classList.add("hidden");
+    newForm.classList.add("hidden");
+
+    if (!threads.length) {
+      listEl.innerHTML =
+        '<p style="font-size:13px;color:var(--muted);">Пока тем нет. Создай первую — расскажи, кто ты и куда хочешь двигаться.</p>';
+      return;
+    }
+
+    const html = threads
+      .map(function (t) {
+        const repliesWord = "ответов"; // можно не заморачиваться с падежами
+        return (
+          '<div class="forum-thread-item" data-thread-id="' +
+          t.id +
+          '" style="padding:8px 10px;border-radius:12px;border:1px solid var(--border);' +
+          'background:rgba(15,23,42,0.9);margin-bottom:6px;cursor:pointer;">' +
+          '<div style="font-size:14px;margin-bottom:2px;">' +
+          t.title +
+          "</div>" +
+          '<div style="font-size:11px;color:var(--muted);">' +
+          t.author +
+          " • " +
+          t.created_at +
+          " • " +
+          t.posts_count +
+          " " +
+          repliesWord +
+          "</div>" +
+          "</div>"
         );
-    }
+      })
+      .join("");
+    listEl.innerHTML = html;
 
-    document.addEventListener("click", (e) => {
-      const pill = e.target.closest(".lang-pill");
-      if (pill) {
-        const lang = pill.dataset.lang;
-        if (["ru", "en", "az"].includes(lang)) {
-          currentLang = lang;
-          localStorage.setItem("stepup_lang", lang);
-          applyTranslations();
-        }
-      }
-    });
-
-    // --------- аккаунт (front-only, localStorage) ---------
-    const USER_KEY = "stepup_user";
-
-    function getCurrentUser() {
-      try {
-        const raw = localStorage.getItem(USER_KEY);
-        if (!raw) return null;
-        return JSON.parse(raw);
-      } catch {
-        return null;
-      }
-    }
-
-    function saveUser(user) {
-      localStorage.setItem(USER_KEY, JSON.stringify(user));
-    }
-
-    function updateAccountUI() {
-      const btn = document.getElementById("account-btn");
-      const summary = document.getElementById("profile-summary");
-      const user = getCurrentUser();
-      if (!btn || !summary) return;
-
-      const span = btn.querySelector("span");
-      if (user) {
-        span.textContent = user.name || user.email || "Аккаунт";
-        let desc = "";
-        if (user.track) {
-          desc += "Трек: ";
-          desc += user.track.toUpperCase();
-        }
-        if (user.profession) {
-          if (desc) desc += " • ";
-          desc += "Роль: " + user.profession;
-        }
-        summary.textContent = desc || "";
-      } else {
-        span.textContent =
-          translations[currentLang]?.account_btn ||
-          translations.ru.account_btn;
-        summary.textContent = "";
-      }
-    }
-
-    function showAccountModal() {
-      const overlay = document.getElementById("account-overlay");
-      const user = getCurrentUser();
-      const nameInput = document.getElementById("acc-name");
-      const emailInput = document.getElementById("acc-email");
-      const passInput = document.getElementById("acc-password");
-      const trackSelect = document.getElementById("acc-track");
-      const errorEl = document.getElementById("account-error");
-      const titleEl = document.getElementById("account-title");
-      const subEl = document.getElementById("account-sub");
-
-      errorEl.textContent = "";
-
-      if (user) {
-        titleEl.textContent = "Твой профиль Stepup";
-        subEl.textContent =
-          "Измени имя, направление или очисти данные в браузере.";
-        nameInput.value = user.name || "";
-        emailInput.value = user.email || "";
-        passInput.value = user.password || "";
-        trackSelect.value = user.track || "";
-      } else {
-        titleEl.textContent = "Создать аккаунт Stepup";
-        subEl.textContent =
-          "Сохрани результаты теста и доступ к форуму на этом устройстве.";
-        nameInput.value = "";
-        emailInput.value = "";
-        passInput.value = "";
-        trackSelect.value = "";
-      }
-
-      overlay.classList.add("visible");
-    }
-
-    function hideAccountModal() {
-      const overlay = document.getElementById("account-overlay");
-      overlay.classList.remove("visible");
-    }
-
-    // --------- демо-тест на сайте ---------
-    const quizQuestions = [
-      {
-        id: 1,
-        text: {
-          ru: "Что тебе интереснее всего делать в проекте?",
-          en: "What is most interesting for you in a project?",
-          az: "Layihədə sənin üçün ən maraqlı nədir?",
-        },
-        options: [
-          { label: { ru: "Создавать визуально убедительное", en: "Create visuals", az: "Vizual konseptlər yaratmaq" }, weights: { creative: 2 } },
-          { label: { ru: "Решать логические/тех. задачи", en: "Solve tech / logical tasks", az: "Texniki/məntiqi tapşırıqlar" }, weights: { tech: 2 } },
-          { label: { ru: "Помогать людям и общаться", en: "Help people and communicate", az: "İnsanlara kömək və ünsiyyət" }, weights: { social: 2 } },
-          { label: { ru: "Организовывать и влиять", en: "Organise and influence", az: "Təşkil etmək və təsir göstərmək" }, weights: { business: 2 } },
-        ],
-      },
-      {
-        id: 2,
-        text: {
-          ru: "Какой тип задач тебя заряжает?",
-          en: "What type of tasks energize you?",
-          az: "Səni hansı tapşırıqlar ruhlandırır?",
-        },
-        options: [
-          { label: { ru: "Дизайн-процесс и сторителлинг", en: "Design process & storytelling", az: "Dizayn və hekayəçilik" }, weights: { creative: 2 } },
-          { label: { ru: "Код/данные/автоматизация", en: "Code / data / automation", az: "Kod / data / avtomatlaşdırma" }, weights: { tech: 2 } },
-          { label: { ru: "Коммуникации/поддержка", en: "Communications / support", az: "Kommunikasiya / dəstək" }, weights: { social: 2 } },
-          { label: { ru: "Метрики/рост/управление", en: "Metrics / growth / management", az: "Metriklər / artım / idarəetmə" }, weights: { business: 2 } },
-        ],
-      },
-      {
-        id: 3,
-        text: {
-          ru: "Что проще начать уже сегодня?",
-          en: "What is easier to start today?",
-          az: "Bu gün nədən başlamaq asandır?",
-        },
-        options: [
-          { label: { ru: "Сделать обложку/ролик", en: "Make a cover / video", az: "Obloşka və ya video" }, weights: { creative: 2 } },
-          { label: { ru: "Написать бота/скрипт", en: "Write a bot / script", az: "Bot və ya skript yazmaq" }, weights: { tech: 2 } },
-          { label: { ru: "Помочь с разбором кейса", en: "Help with a case", az: "Keysi birlikdə təhlil etmək" }, weights: { social: 2 } },
-          { label: { ru: "Составить план и дедлайны", en: "Draft a plan & deadlines", az: "Plan və deadline tərtib etmək" }, weights: { business: 2 } },
-        ],
-      },
-      {
-        id: 4,
-        text: {
-          ru: "Какой формат команды комфортнее?",
-          en: "What team format is more comfortable?",
-          az: "Hansı komanda formatı rahatdır?",
-        },
-        options: [
-          { label: { ru: "Малая креативная команда", en: "Small creative team", az: "Kiçik kreativ komanda" }, weights: { creative: 2 } },
-          { label: { ru: "Инженерная команда", en: "Engineering team", az: "Mühəndislik komandası" }, weights: { tech: 2 } },
-          { label: { ru: "Поддержка/сообщество", en: "Support / community", az: "Dəstək / icma" }, weights: { social: 2 } },
-          { label: { ru: "Кросс-функциональная", en: "Cross-functional", az: "Çoxfunksiyalı komanda" }, weights: { business: 2 } },
-        ],
-      },
-      {
-        id: 5,
-        text: {
-          ru: "Что для тебя успех через 6 месяцев?",
-          en: "What is success for you in 6 months?",
-          az: "6 ay sonra uğur sənin üçün nədir?",
-        },
-        options: [
-          { label: { ru: "Портфолио из 3 работ", en: "Portfolio of 3 works", az: "3 işdən ibarət portfel" }, weights: { creative: 2 } },
-          { label: { ru: "Работающий автоскрипт/бот", en: "Working script / bot", az: "İşləyən bot və ya skript" }, weights: { tech: 2 } },
-          { label: { ru: "Крутые отзывы людей", en: "Great feedback from people", az: "İnsanlardan yüksək rəy" }, weights: { social: 2 } },
-          { label: { ru: "Рост метрик продукта", en: "Product metrics growth", az: "Layihə metriklərinin artması" }, weights: { business: 2 } },
-        ],
-      },
-    ];
-
-    let quizIndex = 0;
-    let quizScores = { tech: 0, creative: 0, social: 0, business: 0 };
-
-    function renderQuizCard() {
-      const q = quizQuestions[quizIndex];
-      if (!q) {
-        showQuizResult();
-        return;
-      }
-      const label = document.getElementById("quiz-label");
-      const textEl = document.getElementById("quiz-question");
-      const optsEl = document.getElementById("quiz-options");
-
-      label.textContent = `${currentLang === "ru" ? "Вопрос" : currentLang === "az" ? "Sual" : "Question"} ${
-        quizIndex + 1
-      } / ${quizQuestions.length}`;
-
-      const text = q.text[currentLang] || q.text.ru;
-      textEl.textContent = text;
-
-      optsEl.innerHTML = "";
-      q.options.forEach((opt, idx) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "demo-option";
-        btn.textContent = opt.label[currentLang] || opt.label.ru;
-        btn.addEventListener("click", () => {
-          Object.entries(opt.weights).forEach(([k, v]) => {
-            quizScores[k] = (quizScores[k] || 0) + v;
-          });
-          quizIndex++;
-          updateQuizBar();
-          renderQuizCard();
-        });
-        optsEl.appendChild(btn);
-      });
-    }
-
-    function updateQuizBar() {
-      const bar = document.getElementById("quiz-bar");
-      const progress = ((quizIndex) / quizQuestions.length) * 100;
-      bar.style.width = `${progress}%`;
-    }
-
-    function showQuizResult() {
-      const label = document.getElementById("quiz-label");
-      const textEl = document.getElementById("quiz-question");
-      const optsEl = document.getElementById("quiz-options");
-      const resultLabel = document.getElementById("quiz-result-label");
-
-      label.textContent =
-        currentLang === "ru"
-          ? "Результат"
-          : currentLang === "az"
-          ? "Nəticə"
-          : "Result";
-
-      const entries = Object.entries(quizScores);
-      entries.sort((a, b) => b[1] - a[1]);
-      const top = entries[0]?.[0] || "tech";
-
-      const names = {
-        tech: { ru: "Tech", en: "Tech", az: "Tech" },
-        creative: { ru: "Creative / Design", en: "Creative / Design", az: "Creative / Design" },
-        social: { ru: "Social / CX", en: "Social / CX", az: "Social / CX" },
-        business: { ru: "Product / Business", en: "Product / Business", az: "Product / Business" },
-      };
-
-      const topLabel = names[top][currentLang] || names[top].ru;
-
-      const message =
-        currentLang === "ru"
-          ? `Тебе ближе всего трек: ${topLabel}. Сохрани результат в аккаунте и пройди тест в боте, чтобы получить подборку профессий.`
-          : currentLang === "az"
-          ? `Sənə ən yaxın trek: ${topLabel}. Nəticəni hesabında saxla və peşə seçimi üçün botdakı tam testi keç.`
-          : `Your closest track: ${topLabel}. Save it in your account and take the full test in the bot to get matching roles.`;
-
-      textEl.textContent = message;
-      optsEl.innerHTML = "";
-
-      resultLabel.innerHTML =
-        (currentLang === "ru"
-          ? "Ближе всего: "
-          : currentLang === "az"
-          ? "Ən yaxın: "
-          : "Closest: ") + `<b>${topLabel}</b>`;
-
-      // обновим профиль пользователя (front-only)
-      const user = getCurrentUser();
-      const professionName =
-        top === "tech"
-          ? "Junior Python / Data"
-          : top === "creative"
-          ? "Junior UX/UI Designer"
-          : top === "social"
-          ? "Customer Success / Support"
-          : "Product / Biz-analyst";
-
-      const updated = {
-        ...(user || {}),
-        track: top,
-        profession: professionName,
-      };
-      saveUser(updated);
-      updateAccountUI();
-    }
-
-    document.querySelectorAll(".demo-lang-pill").forEach((el) => {
-      el.addEventListener("click", () => {
-        document
-          .querySelectorAll(".demo-lang-pill")
-          .forEach((p) => p.classList.remove("active"));
-        el.classList.add("active");
-        const lang = el.getAttribute("data-demo-lang");
-        if (["ru", "en", "az"].includes(lang)) {
-          currentLang = lang;
-          localStorage.setItem("stepup_lang", lang);
-          applyTranslations();
-          renderQuizCard();
-        }
+    listEl.querySelectorAll(".forum-thread-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        const id = parseInt(item.getAttribute("data-thread-id"), 10);
+        if (!isNaN(id)) forumOpenThread(id);
       });
     });
+  }
 
-    function scrollToDemo() {
-      document
-        .getElementById("demo-card")
-        .scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-
-    // --------- форум ---------
-    const API_BASE = "/api";
-
-    let forumCurrentThreadId = null;
-
-    async function forumApiGet(path) {
-      const res = await fetch(`${API_BASE}${path}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json();
-    }
-
-    async function forumApiPost(path, payload) {
-      const res = await fetch(`${API_BASE}${path}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) {
-        const txt = await res.text().catch(() => "");
-        throw new Error(`HTTP ${res.status}: ${txt}`);
-      }
-      return res.json();
-    }
-
-    function forumRenderThreadsList(threads) {
+  async function forumLoadThreads() {
+    try {
+      const threads = await forumApiGet("/forum/threads");
+      forumRenderThreadsList(threads);
+    } catch (e) {
+      console.error(e);
       const listEl = document.getElementById("forum-list");
-      const threadEl = document.getElementById("forum-thread");
-      const backBtn = document.getElementById("forum-back-btn");
-      const replyForm = document.getElementById("forum-reply-form");
-      const newForm = document.getElementById("forum-new-form");
-      if (!listEl) return;
-
-      forumCurrentThreadId = null;
-      threadEl.classList.add("hidden");
-      backBtn.classList.add("hidden");
-      replyForm.classList.add("hidden");
-      newForm.classList.add("hidden");
-
-      if (!threads.length) {
+      if (listEl) {
         listEl.innerHTML =
-          '<p style="font-size:13px;color:var(--muted);">Пока тем нет. Создай первую — расскажи, кто ты и куда хочешь двигаться.</p>';
-        return;
-      }
-
-      const html = threads
-        .map((t) => {
-          const replies = t.posts_count === 1 ? "ответ" : "ответов";
-          return `
-          <div class="forum-thread-item" data-thread-id="${t.id}"
-            style="padding:8px 10px;border-radius:12px;border:1px solid var(--border);
-                   background:rgba(15,23,42,0.9);margin-bottom:6px;cursor:pointer;">
-            <div style="font-size:14px;margin-bottom:2px;">${t.title}</div>
-            <div style="font-size:11px;color:var(--muted);">
-              ${t.author} • ${t.created_at} • ${t.posts_count} ${replies}
-            </div>
-          </div>
-        `;
-        })
-        .join("");
-      listEl.innerHTML = html;
-
-      listEl.querySelectorAll(".forum-thread-item").forEach((item) => {
-        item.addEventListener("click", () => {
-          const id = parseInt(item.getAttribute("data-thread-id"), 10);
-          if (!isNaN(id)) forumOpenThread(id);
-        });
-      });
-    }
-
-    async function forumLoadThreads() {
-      try {
-        const threads = await forumApiGet("/forum/threads");
-        forumRenderThreadsList(threads);
-      } catch (e) {
-        console.error(e);
-        const listEl = document.getElementById("forum-list");
-        if (listEl) {
-          listEl.innerHTML =
-            '<p style="font-size:13px;color:#f97373;">Не удалось загрузить темы форума.</p>';
-        }
+          '<p style="font-size:13px;color:#f97373;">Не удалось загрузить темы форума.</p>';
       }
     }
+  }
 
-    function escapeHtml(text) {
-      return text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+  function escapeHtml(text) {
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function forumRenderThread(thread) {
+    const listEl = document.getElementById("forum-list");
+    const threadEl = document.getElementById("forum-thread");
+    const titleEl = document.getElementById("forum-thread-title");
+    const metaEl = document.getElementById("forum-thread-meta");
+    const postsEl = document.getElementById("forum-thread-posts");
+    const infoEl = document.getElementById("forum-thread-info");
+    const backBtn = document.getElementById("forum-back-btn");
+    const replyForm = document.getElementById("forum-reply-form");
+    const replyBody = document.getElementById("forum-reply-body");
+
+    forumCurrentThreadId = thread.id;
+
+    listEl.innerHTML = "";
+    threadEl.classList.remove("hidden");
+    backBtn.classList.remove("hidden");
+
+    titleEl.textContent = thread.title;
+    metaEl.textContent = thread.author + " • " + thread.created_at;
+
+    const user = getCurrentUser();
+    if (user) {
+      replyForm.classList.remove("hidden");
+      infoEl.textContent =
+        "Отвечаешь как " +
+        (user.name || user.email || "Anon") +
+        ". Сообщения видят все.";
+    } else {
+      replyForm.classList.add("hidden");
+      infoEl.textContent =
+        "Чтобы ответить, войди в аккаунт на сайте (кнопка «Аккаунт» сверху).";
     }
 
-    function forumRenderThread(thread) {
-      const listEl = document.getElementById("forum-list");
-      const threadEl = document.getElementById("forum-thread");
-      const titleEl = document.getElementById("forum-thread-title");
-      const metaEl = document.getElementById("forum-thread-meta");
-      const postsEl = document.getElementById("forum-thread-posts");
-      const infoEl = document.getElementById("forum-thread-info");
-      const backBtn = document.getElementById("forum-back-btn");
-      const replyForm = document.getElementById("forum-reply-form");
-      const replyBody = document.getElementById("forum-reply-body");
+    replyBody.value = "";
 
-      forumCurrentThreadId = thread.id;
+    postsEl.innerHTML = thread.posts
+      .map(function (p) {
+        return (
+          '<div style="border-radius:12px;border:1px solid var(--border);' +
+          'padding:6px 8px;background:rgba(15,23,42,0.95);">' +
+          '<div style="font-size:12px;color:var(--muted);margin-bottom:2px;">' +
+          p.author +
+          " • " +
+          p.created_at +
+          "</div>" +
+          '<div style="font-size:13px;">' +
+          escapeHtml(p.body) +
+          "</div>" +
+          "</div>"
+        );
+      })
+      .join("");
+  }
 
-      listEl.innerHTML = "";
-      threadEl.classList.remove("hidden");
-      backBtn.classList.remove("hidden");
-
-      titleEl.textContent = thread.title;
-      metaEl.textContent = `${thread.author} • ${thread.created_at}`;
-
-      const user = getCurrentUser();
-      if (user) {
-        replyForm.classList.remove("hidden");
-        infoEl.textContent =
-          "Отвечаешь как " +
-          (user.name || user.email || "Anon") +
-          ". Сообщения видят все.";
-      } else {
-        replyForm.classList.add("hidden");
-        infoEl.textContent =
-          "Чтобы ответить, войди в аккаунт на сайте (кнопка «Аккаунт» сверху).";
-      }
-
-      replyBody.value = "";
-
-      postsEl.innerHTML = thread.posts
-        .map(
-          (p) => `
-        <div style="border-radius:12px;border:1px solid var(--border);
-                    padding:6px 8px;background:rgba(15,23,42,0.95);">
-          <div style="font-size:12px;color:var(--muted);margin-bottom:2px;">
-            ${p.author} • ${p.created_at}
-          </div>
-          <div style="font-size:13px;">${escapeHtml(p.body)}</div>
-        </div>
-      `,
-        )
-        .join("");
-    }
-
-    async function forumOpenThread(id) {
-      try {
-        const thread = await forumApiGet(`/forum/threads/${id}`);
-        forumRenderThread(thread);
-      } catch (e) {
-        console.error(e);
-        alert("Не удалось загрузить тему.");
-      }
-    }
-
-    async function forumCreateThread(title, body) {
-      const user = getCurrentUser();
-      if (!user) {
-        alert("Сначала войди в аккаунт (кнопка «Аккаунт» сверху).");
-        return;
-      }
-      const payload = {
-        title,
-        body,
-        author: user.name || user.email || "Anon",
-      };
-      const thread = await forumApiPost("/forum/threads", payload);
+  async function forumOpenThread(id) {
+    try {
+      const thread = await forumApiGet("/forum/threads/" + id);
       forumRenderThread(thread);
+    } catch (e) {
+      console.error(e);
+      alert("Не удалось загрузить тему.");
     }
+  }
 
-    async function forumReplyCurrentThread(body) {
+  async function forumCreateThread(title, body) {
+    const user = getCurrentUser();
+    if (!user) {
+      alert("Сначала войди в аккаунт (кнопка «Аккаунт» сверху).");
+      return;
+    }
+    const payload = {
+      title: title,
+      body: body,
+      author: user.name || user.email || "Anon",
+    };
+    const thread = await forumApiPost("/forum/threads", payload);
+    forumRenderThread(thread);
+  }
+
+  async function forumReplyCurrentThread(body) {
+    const user = getCurrentUser();
+    if (!user) {
+      alert("Сначала войди в аккаунт (кнопка «Аккаунт» сверху).");
+      return;
+    }
+    if (!forumCurrentThreadId) {
+      alert("Тема не выбрана.");
+      return;
+    }
+    const payload = {
+      body: body,
+      author: user.name || user.email || "Anon",
+    };
+    await forumApiPost(
+      "/forum/threads/" + forumCurrentThreadId + "/posts",
+      payload,
+    );
+    await forumOpenThread(forumCurrentThreadId);
+  }
+
+  function forumInitUI() {
+    const newBtn = document.getElementById("forum-new-btn");
+    const backBtn = document.getElementById("forum-back-btn");
+    const newForm = document.getElementById("forum-new-form");
+    const newTitle = document.getElementById("forum-new-title");
+    const newBody = document.getElementById("forum-new-body");
+    const newError = document.getElementById("forum-new-error");
+    const replyForm = document.getElementById("forum-reply-form");
+    const replyBody = document.getElementById("forum-reply-body");
+
+    if (!newBtn || !backBtn) return;
+
+    newBtn.addEventListener("click", () => {
       const user = getCurrentUser();
       if (!user) {
-        alert("Сначала войди в аккаунт (кнопка «Аккаунт» сверху).");
+        alert("Чтобы создать тему, войди в аккаунт на сайте.");
         return;
       }
-      if (!forumCurrentThreadId) {
-        alert("Тема не выбрана.");
-        return;
-      }
-      const payload = {
-        body,
-        author: user.name || user.email || "Anon",
-      };
-      await forumApiPost(`/forum/threads/${forumCurrentThreadId}/posts`, payload);
-      await forumOpenThread(forumCurrentThreadId);
-    }
-
-    function forumInitUI() {
-      const newBtn = document.getElementById("forum-new-btn");
-      const backBtn = document.getElementById("forum-back-btn");
-      const newForm = document.getElementById("forum-new-form");
-      const newTitle = document.getElementById("forum-new-title");
-      const newBody = document.getElementById("forum-new-body");
-      const newError = document.getElementById("forum-new-error");
-      const replyForm = document.getElementById("forum-reply-form");
-      const replyBody = document.getElementById("forum-reply-body");
-
-      if (!newBtn || !backBtn) return;
-
-      newBtn.addEventListener("click", () => {
-        const user = getCurrentUser();
-        if (!user) {
-          alert("Чтобы создать тему, войди в аккаунт на сайте.");
-          return;
-        }
-        newForm.classList.remove("hidden");
-        newTitle.value = "";
-        newBody.value = "";
-        newError.textContent = "";
-      });
-
-      backBtn.addEventListener("click", () => {
-        forumLoadThreads();
-      });
-
-      newForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        newError.textContent = "";
-        const title = newTitle.value.trim();
-        const body = newBody.value.trim();
-        if (!title || !body) {
-          newError.textContent = "Нужны заголовок и текст.";
-          return;
-        }
-        try {
-          await forumCreateThread(title, body);
-          newForm.classList.add("hidden");
-        } catch (err) {
-          console.error(err);
-          newError.textContent = "Не удалось создать тему.";
-        }
-      });
-
-      replyForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const text = replyBody.value.trim();
-        if (!text) return;
-        try {
-          await forumReplyCurrentThread(text);
-          replyBody.value = "";
-        } catch (err) {
-          console.error(err);
-          alert("Не удалось отправить ответ.");
-        }
-      });
-
-      forumLoadThreads();
-    }
-
-    // --------- инициализация ---------
-    document.addEventListener("DOMContentLoaded", () => {
-      applyTranslations();
-      updateAccountUI();
-      renderQuizCard();
-      updateQuizBar();
-      forumInitUI();
-
-      document
-        .getElementById("account-btn")
-        .addEventListener("click", showAccountModal);
-      document
-        .getElementById("account-close")
-        .addEventListener("click", hideAccountModal);
-      document
-        .getElementById("account-overlay")
-        .addEventListener("click", (e) => {
-          if (e.target.id === "account-overlay") hideAccountModal();
-        });
-
-      document
-        .getElementById("account-form")
-        .addEventListener("submit", (e) => {
-          e.preventDefault();
-          const name = document.getElementById("acc-name").value.trim();
-          const email = document.getElementById("acc-email").value.trim();
-          const password = document.getElementById("acc-password").value.trim();
-          const track = document.getElementById("acc-track").value;
-          const errEl = document.getElementById("account-error");
-
-          if (!email || !password) {
-            errEl.textContent = "Нужны email и пароль.";
-            return;
-          }
-          const user = {
-            name,
-            email,
-            password,
-            track,
-            profession: getCurrentUser()?.profession || "",
-          };
-          saveUser(user);
-          errEl.textContent = "";
-          updateAccountUI();
-          hideAccountModal();
-        });
-
-      document
-        .getElementById("account-toggle")
-        .addEventListener("click", () => {
-          const user = getCurrentUser();
-          if (user) {
-            // "выйти" — просто чистим данные
-            localStorage.removeItem(USER_KEY);
-            updateAccountUI();
-            showAccountModal();
-          } else {
-            showAccountModal();
-          }
-        });
+      newForm.classList.remove("hidden");
+      newTitle.value = "";
+      newBody.value = "";
+      newError.textContent = "";
     });
-  </script>
+
+    backBtn.addEventListener("click", () => {
+      forumLoadThreads();
+    });
+
+    newForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      newError.textContent = "";
+      const title = newTitle.value.trim();
+      const body = newBody.value.trim();
+      if (!title || !body) {
+        newError.textContent = "Нужны заголовок и текст.";
+        return;
+      }
+      try {
+        await forumCreateThread(title, body);
+        newForm.classList.add("hidden");
+      } catch (err) {
+        console.error(err);
+        newError.textContent = "Не удалось создать тему.";
+      }
+    });
+
+    replyForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const text = replyBody.value.trim();
+      if (!text) return;
+      try {
+        await forumReplyCurrentThread(text);
+        replyBody.value = "";
+      } catch (err) {
+        console.error(err);
+        alert("Не удалось отправить ответ.");
+      }
+    });
+
+    forumLoadThreads();
+  }
+
+  // --------- инициализация ---------
+  document.addEventListener("DOMContentLoaded", () => {
+    applyTranslations();
+    updateAccountUI();
+    renderQuizCard();
+    updateQuizBar();
+    forumInitUI();
+
+    document
+      .getElementById("account-btn")
+      .addEventListener("click", showAccountModal);
+    document
+      .getElementById("account-close")
+      .addEventListener("click", hideAccountModal);
+    document
+      .getElementById("account-overlay")
+      .addEventListener("click", (e) => {
+        if (e.target.id === "account-overlay") hideAccountModal();
+      });
+
+    document
+      .getElementById("account-form")
+      .addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("acc-name").value.trim();
+        const email = document.getElementById("acc-email").value.trim();
+        const password = document.getElementById("acc-password").value.trim();
+        const track = document.getElementById("acc-track").value;
+        const errEl = document.getElementById("account-error");
+        const existing = getCurrentUser();
+
+        if (!email || !password) {
+          errEl.textContent = "Нужны email и пароль.";
+          return;
+        }
+        const user = {
+          name: name,
+          email: email,
+          password: password,
+          track: track,
+          profession: existing && existing.profession ? existing.profession : "",
+        };
+        saveUser(user);
+        errEl.textContent = "";
+        updateAccountUI();
+        hideAccountModal();
+      });
+
+    document.getElementById("account-toggle").addEventListener("click", () => {
+  const user = getCurrentUser();
+  const errEl = document.getElementById("account-error");
+
+  if (user) {
+    // Выход из аккаунта
+    localStorage.removeItem(USER_KEY);
+    if (errEl) errEl.textContent = "";
+    updateAccountUI();
+    hideAccountModal();
+  } else {
+    // Подсказка по "входу" на этом же устройстве
+    if (errEl) {
+      errEl.textContent =
+        "Сейчас аккаунт хранится только в этом браузере. " +
+        "Если ты уже создавал его здесь, просто введи тот же email и пароль и нажми «Сохранить».";
+    }
+  }
+});
+
+});
+
+</script>
+
 </body>
 </html>
